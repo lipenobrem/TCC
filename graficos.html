@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página com Gráficos e Títulos sobrepostos</title>
+    <link rel="stylesheet" href="CSS/graficos.css">
+    <script src="libschart/chart.min.js"></script>
+</head>
+<body>
+        <!--Barra de navegação-->
+        <div class="menu">
+            <div class="conteiner">
+                <span class="text first-text">CSIA </span>
+                <span class="text second-text">- Sistema de Irrigação</span>
+            </div>
+            <script>
+                const text = document.querySelector('.second-text');
+    
+                const textLoad = () => {
+                    setTimeout(() => {
+                        text.textContent = ' - Sistema de Irrigação';
+                    }, 0);
+                }
+    
+                textLoad();
+                setInterval(textLoad, 4000)
+    
+            </script>
+            <nav>
+                <a href="index.html">Início</a>
+                <a href="textos.html">Sobre</a>
+                <a href="relatorio.html">Relatório</a>
+                <a href="graficos.html">Gráficos</a>
+                <a href="desenvolvedores.html">Desenvolvedores</a>
+                <div class="animation start-home"></div>
+            </nav>
+        </div>
+
+    <div class="content">
+        <!-- Primeira seção -->
+        <div class="section">
+            <div class="chart-container" id="tpm">
+                <canvas id="temperature-chart"></canvas>
+            </div>
+            <div class="text-container">
+                <div class="title">Temperatura</div>
+                <p class="description">A temperatura do solo será apresentada aqui, convertida em °C</p>
+            </div>
+        </div>
+
+        <!-- Segunda seção -->
+        <div class="section">
+            <div class="chart-container" id="upm">
+                <canvas id="humidity-chart"></canvas>
+            </div>
+            <div class="text-container">
+                <div class="title">Umidade do solo</div>
+                <p class="description">A umidade do solo será apresentada aqui, convertida em porcentagem..</p>
+            </div>
+        </div>
+    </div>
+  
+
+    <!-- Div de Referências -->
+    <div class="referencias">
+        <h2>Referências</h2>
+        <p>Design e conteúdo: Desenvolvido por Augusto, Felipe, Gustavo, Julio e Lucas.</p>
+        <p>Outros créditos: Vitor Amaral Sanches Lucas e Fernanda Amaral Sanchez Lucas</p>
+    </div>
+
+    <!-- Rodapé -->
+    <footer>
+        <p>&copy; 2024 CSIA. Todos os direitos reservados.</p>
+        <p><a href="#">Termos de Serviço</a> | <a href="#">Política de Privacidade</a></p>
+        <div class="redes-sociais">
+            <a href="#">Instagram</a>
+        </div>
+    </footer>
+  <script src="JS/grf.js"></script>
+</body>
+</html>

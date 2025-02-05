@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/relatorio.css">
+    <title>Página Completa com Referências</title>
+</head>
+<body>
+    <!--Barra de navegação-->
+    <div class="menu">
+        <div class="conteiner">
+            <span class="text first-text">CSIA </span>
+            <span class="text second-text">- Sistema de Irrigação</span>
+        </div>
+        <script>
+            const text = document.querySelector('.second-text');
+
+            const textLoad = () => {
+                setTimeout(() => {
+                    text.textContent = ' - Sistema de Irrigação';
+                }, 0);
+            }
+
+            textLoad();
+            setInterval(textLoad, 4000)
+
+        </script>
+        <nav>
+            <a href="index.html">Início</a>
+            <a href="sobre.html">Sobre</a>
+            <a href="relatorio.html">Relatório</a>
+            <a href="graficos.html">Gráficos</a>
+            <a href="desenvolvedores.html">Desenvolvedores</a>
+            <div class="animation start-home"></div>
+        </nav>
+    </div>
+    <center>
+    <img id="manutencao" src="imgs/maintenance.png" alt="manutenção">
+    <h1 id="manu">Página em Manutenção</h1>
+    </center>
+</body>
+</html>

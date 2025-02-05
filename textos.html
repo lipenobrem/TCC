@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/sobre.css">
+    <title>Página Completa com Referências</title>
+</head>
+<body>
+    <!--Barra de navegação-->
+    <div class="menu">
+        <div class="conteiner">
+            <span class="text first-text">CSIA </span>
+            <span class="text second-text">- Sistema de Irrigação</span>
+        </div>
+        <script>
+            const text = document.querySelector('.second-text');
+
+            const textLoad = () => {
+                setTimeout(() => {
+                    text.textContent = ' - Sistema de Irrigação';
+                }, 0);
+            }
+
+            textLoad();
+            setInterval(textLoad, 4000)
+
+        </script>
+        <nav>
+            <a href="index.html">Início</a>
+            <a href="sobre.html">Sobre</a>
+            <a href="relatorio.html">Relatório</a>
+            <a href="graficos.html">Gráficos</a>
+            <a href="desenvolvedores.html">Desenvolvedores</a>
+            <div class="animation start-home"></div>
+        </nav>
+    </div>
+
+    <div class="container">
+        <!-- Primeira Seção -->
+        <div class="conteudo">
+            <!-- Imagem ao lado esquerdo -->
+            <img src="imgs/roseira.jpeg" alt="Imagem grande" class="imagem">
+            
+            <!-- Conteúdo de texto: linha, título e parágrafo -->
+            <div class="conteudo-texto">
+                <div style="display: flex; align-items: center;">
+                    <div class="linha-vertical"></div>
+                    <h1>Sobre o Projeto:</h1>
+                </div>
+                <p id="oque">
+                    CSIA é um projeto sobre a criação de um sistema de irrigação automatizada para o jardim de inverno da Etec Doutor Celso Giglio. O objetivo do projeto é o desenvolvimento de um sistema de irrigação automatizado, por meio de gotejamento, conectado a um servidor web, para que os sensores possam capturar dados de temperatura e umidade do solo, em períodos preestabelecidos e enviar os dados para a web, que fará o tratamento e a apresentação desses dados em visualizações eficientes e, com bases nas informações, irrigar o solo quando apresentar umidade abaixo do limite prefixado previamente.                 </p>
+            </div>
+        </div>
+
+        <!-- Divisória personalizada -->
+        <div class="divisoria"></div>
+        
+        <!-- Segunda Seção -->
+        <div class="conteudo-texto">
+            <h1 id="segText">Justificativa</h1>
+            <p id="segTex">
+                Justifica-se o interesse por este tema, pois na referida instituição não existe um sistema automatizado para realizar a rega das plantas, sendo necessária a realização de forma manual e tal processo é dificultado nos períodos de férias e de recesso, pois são os professores que estão responsáveis por este jardim.            </p><br><br><br>
+        </div>
+
+        <!-- Cartões Interativos -->
+        <div class="cartoes-container">
+            <!-- Primeiro Cartão -->
+            <div class="cartao">
+                <img src="imgs/esp.jpeg" alt="Imagem do Cartão">
+                <div class="texto-cartao">
+                    <h2>ESP32</h2>
+                    <p>É o microcontrolador responsável por receber os dados dos sensores e controlar a bomba d'água, além de se comunicar com o servidor web para a apresentação dos dados relativos à umidade e temperatura.</p>
+                </div>
+            </div>
+
+            <!-- Segundo Cartão -->
+            <div class="cartao">
+                <img src="imgs/bomba.jpeg" alt="Imagem do Cartão">
+                <div class="texto-cartao">
+                    <h2>Bomba d'água Rs385</h2>
+                    <p>Essa Mini Bomba de Água de 12 volts é projetada para aplicações que requerem movimentação de água, como sistemas de resfriamento, aquários e sistemas de irrigação.</p>
+                </div>
+            </div>
+
+            <!-- Terceiro Cartão -->
+            <div class="cartao">
+                <img src="imgs/sensores.jpeg" alt="Imagem do Cartão">
+                <div class="texto-cartao">
+                    <h2>Sensores DHT11 e de umidade resistivo</h2>
+                    <p>O sensor DHT11 (à direita) é responsável por medir a temperatura e a umidade do ar, enquanto o sensor resistivo (à esquerda) capta a umidade do solo em que estiver inserido.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Div de Referências -->
+    <div class="referencias">
+        <h2>Referências</h2>
+        <p>Design e conteúdo: Desenvolvido por Augusto, Felipe, Gustavo, Julio e Lucas.</p>
+        <p>Outros créditos: Vitor Amaral Sanches Lucas e Fernanda Amaral Sanchez Lucas</p>
+    </div>
+
+    <!-- Rodapé -->
+    <footer>
+        <p>&copy; 2024 CSIA. Todos os direitos reservados.</p>
+        <p><a href="#">Termos de Serviço</a> | <a href="#">Política de Privacidade</a></p>
+        <div class="redes-sociais">
+            <a href="#">Instagram</a>
+        </div>
+    </footer>
+
+</body>
+</html>

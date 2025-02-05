@@ -1,0 +1,453 @@
+body {
+    font-family: "Poppins", sans-serif;
+    background: #059b9a;
+    margin: 0;
+    padding: 0;
+    /* justify-items: center; */
+    overflow-x: hidden;
+}
+
+.menu {
+    display: flex;
+    justify-content: space-around;
+    background-color: #0c0636;
+    height: 10vh;
+    align-items: center;
+	width: 100%;
+}
+nav{
+	position: relative;
+	width: 620px;
+	height: 42.5px;
+	background: #53ba83;
+	border-radius: 20px;
+	font-size: 0;
+	box-shadow: 0 4px 3px 0 rgba(0, 0, 0, 0.477);
+}
+nav a{
+    font-family: "Open Sans", sans-serif;
+	font-size: 14px;
+	text-transform: uppercase;
+	color: white;
+	text-decoration: none;
+	line-height: 42.5px;
+	position: relative;
+	z-index: 1000;
+	display: inline-block;
+	text-align: center;
+}
+nav .animation{
+	position: absolute;
+	height: 100%; 
+	/* height: 5px;  */
+	top: 0; 
+	/* bottom: 0;  */
+	z-index: 0;
+    background-color: #37905b;
+	/* background: rgb(102, 209, 102); */
+	border-radius: 20px;
+	transition: all .5s ease 0s;
+}
+
+nav a:nth-child(5){
+	width: 140px;
+}
+nav .start-home, a:nth-child(5):hover~.animation{
+	width: 188px;
+	left: 432px;
+}
+nav a:nth-child(1){
+	width: 100px;
+}
+nav a:nth-child(1):hover~.animation{
+	width: 100px;
+	left: 0;
+}
+nav a:nth-child(2){
+	width: 110px;
+}
+nav a:nth-child(2):hover~.animation{
+	width: 110px;
+	left: 100px;
+}
+nav a:nth-child(4){
+	width: 140px;
+}
+nav a:nth-child(4):hover~.animation{
+	width: 125px;
+	left: 320px;
+}
+nav a:nth-child(3){
+	width: 100px;
+}
+nav a:nth-child(3):hover~.animation{
+	width: 100px;
+	left: 210px;
+}
+
+/*LOGO ANIMADO*/
+
+.conteiner{
+    width: 500px;
+    overflow: hidden;
+
+}
+
+.conteiner .text{
+    position: relative;
+    color: #53ba83;
+    font-size: 35px;
+    font-weight: 600;
+}
+
+
+.conteiner .text.first-text{ 
+    color: rgb(255, 255, 255);
+    font-size: 45px;
+    text-shadow: 3px 3px #53ba8392;
+}
+
+.text.second-text::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #0c0636;
+    border-left: 2px solid rgb(102, 209, 102);
+    animation: animate 6s steps(12) infinite;
+}
+
+@keyframes animate{
+    40%, 60%{
+        left: calc(100% + 4px);
+    }
+
+    4100%{
+        left: 0%;
+    }
+}
+
+/* Tornar o menu responsivo para DESKTOP apenas */
+@media (max-width: 1200px) {
+    .menu {
+        height: 8vh; /* Diminuir a altura da barra */
+    }
+
+    .conteiner .text {
+        font-size: 26px; /* Reduzir o tamanho do texto do logo */
+    }
+
+    .conteiner .text.first-text {
+        font-size: 30px; /* Ajustar a fonte do primeiro texto do logo */
+    }
+
+    nav {
+        width: 100%; /* Permitir que o menu ocupe mais espaço */
+    }
+
+    nav a {
+        font-size: 12px; /* Diminuir o tamanho das fontes dos links */
+        line-height: 36px; /* Ajustar a altura da linha dos links */
+        padding: 0 12px; /* Reduzir o padding dos links */
+    }
+
+}
+
+@media (max-width: 992px) {
+    .menu {
+        height: 7vh;
+    }
+
+    .conteiner .text {
+        font-size: 22px;
+    }
+
+    .conteiner .text.first-text {
+        font-size: 26px;
+    }
+
+    nav {
+        width: 100%; /* Ocupar 100% da largura disponível */
+    }
+
+    .nav-links {
+        justify-content: space-around; /* Distribuir igualmente */
+    }
+
+    nav a {
+        font-size: 11px;
+        line-height: 32px;
+        padding: 0 10px; /* Reduzir ainda mais o padding */
+    }
+
+}
+
+@media (max-width: 768px) {
+    .menu {
+        height: 6vh;
+    }
+
+    .conteiner .text {
+        font-size: 18px;
+    }
+
+    .conteiner .text.first-text {
+        font-size: 22px;
+    }
+
+    nav a {
+        font-size: 10px;
+        line-height: 28px;
+        padding: 0 8px; /* Reduzir o padding para evitar que os textos quebrem */
+    }
+
+    nav .animation {
+        display: none; /* Opcional: Ocultar a animação em tamanhos muito pequenos */
+    }
+}
+
+/*CORPO DA PÁGINA*/
+
+.container {
+    width: 85%;
+    left: 6%;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    background-color: #0c0636;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    position: relative; /* Mantém a posição relativa para o rodapé */
+}
+
+/* Estilo do Título */
+h1 {
+    font-size: 3em;
+    color: #53ba83;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+/* Estilo da Linha Vertical */
+.linha-vertical {
+    width: 5px;
+    height: 100px;
+    background-color: #53ba83;
+    border-radius: 10px;
+    margin-right: 20px;
+    margin-left: 5%;
+}
+
+/* Estilo do Texto */
+p {
+    font-size: 1.2em;
+    color: aliceblue;
+    line-height: 1.5;
+    margin: 10px 0;
+    /* text-align: justify; */
+}
+
+#oque{
+    text-align: justify;
+    width: 85%;
+    margin-left: 6%;
+    text-indent: 5ch;
+}
+
+/* Estilo da Imagem */
+.imagem {
+    width: 40%;
+    max-width: 400px;
+    margin-right: 20px;
+    border-radius: 20px;
+    box-shadow: rgba(3, 214, 119, 0.3) 0px 0px 0px 3px;
+}
+
+/* Divisória personalizada */
+.divisoria {
+    height: 5px;
+    background-color: #53ba83;
+    margin: 40px 0;
+    position: relative;
+    text-align: center;
+    border-radius: 10px;
+}
+
+
+/* Conteúdo de texto */
+.conteudo {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.conteudo-texto {
+    width: 80%;
+}
+
+#segText{
+    margin-left: 46%;
+}
+
+#segTex{
+    text-align: center;
+    margin-left: 26%;
+}
+
+
+/* Cartões Interativos */
+.cartoes-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.cartao {
+    position: relative;
+    width: 250px;
+    height: 400px;
+    overflow: hidden;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.5s ease, height 0.5s ease;
+    flex-grow: 1;
+}
+
+.cartao img {
+    width: 110%;
+    height: 100%;
+    object-fit: cover;
+    transition: filter 0.5s ease;
+}
+
+.cartao:hover {
+    transform: scale(1.05);
+}
+
+.cartao:hover img {
+    filter: blur(5px);
+}
+
+.texto-cartao {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background: #0a3740;
+    color: #fff;
+    text-align: center;
+    transform: translateY(100%);
+    transition: transform 0.5s ease;
+    max-height: 100%;
+    overflow-y: auto;
+}
+
+.cartao:hover .texto-cartao {
+    transform: translateY(0);
+}
+
+/* Rodapé */
+footer {
+    width: 100%;
+    position: absolute;
+    background-color: #095169;
+    color: #fff;
+    text-align: center;
+}
+
+footer p {
+    margin: 5px 0;
+}
+
+footer a {
+    color: #0c0636;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+footer .redes-sociais {
+    margin-top: 10px;
+}
+
+footer .redes-sociais a {
+    margin: 0 10px;
+    color: #0c0636;
+    font-size: 1.2em;
+    transition: color 0.3s;
+}
+
+footer .redes-sociais a:hover {
+    color: #fff;
+}
+
+/* Div de Referências */
+.referencias {
+    position: relative;
+    width: 100%;
+    background-color: #0c0636;
+    padding: 20px;
+    color: #fff;
+    text-align: center;
+}
+
+.referencias h2 {
+    margin: 0;
+    font-size: 1.8em;
+}
+
+.referencias p {
+    margin: 5px 0;
+    font-size: 1em;
+}
+
+/* Ajustes para dispositivos menores */
+@media (max-width: 768px) {
+    .container {
+        text-align: center;
+    }
+
+    .imagem {
+        width: 80%;
+        margin: 0 auto 20px;
+    }
+
+    .conteudo {
+        flex-direction: column;
+    }
+
+    .conteudo-texto {
+        width: 100%;
+    }
+
+    .linha-vertical {
+        display: none;
+    }
+
+    /* Empilhar cartões verticalmente em telas menores */
+    .cartoes-container {
+        flex-direction: column;
+        gap: 20px;
+    }
+}
+
+#manutencao{
+    background-repeat: no-repeat;
+    width: 50vh;
+    position: absolute;
+    left: 37%;
+    top: 20%;
+
+}
+
+#manu{
+    color: #0c0636;
+    box-shadow: none;
+    position: absolute;
+    left: 33%;
+    top: 70%;
+    z-index: 100;
+}

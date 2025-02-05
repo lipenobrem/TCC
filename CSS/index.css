@@ -1,0 +1,527 @@
+body {
+    font-family: "Poppins", sans-serif;
+	background: #10365c;
+    margin: 0%;
+    padding: 0%;
+    overflow: hidden;
+}
+
+.menu {
+    display: flex;
+    justify-content: space-around;
+    background-color: #0c0636;
+    height: 10vh;
+    align-items: center;
+	width: 100%;
+}
+nav{
+	position: relative;
+	width: 620px;
+	height: 42.5px;
+	background: #53ba83;
+	border-radius: 20px;
+	font-size: 0;
+	box-shadow: 0 4px 3px 0 rgba(0, 0, 0, 0.477);
+}
+nav a{
+    font-family: "Open Sans", sans-serif;
+	font-size: 14px;
+	text-transform: uppercase;
+	color: white;
+	text-decoration: none;
+	line-height: 42.5px;
+	position: relative;
+	z-index: 1000;
+	display: inline-block;
+	text-align: center;
+}
+nav .animation{
+	position: absolute;
+	height: 100%; 
+	/* height: 5px;  */
+	top: 0; 
+	/* bottom: 0;  */
+	z-index: 0;
+    background-color: #37905b;
+	/* background: rgb(102, 209, 102); */
+	border-radius: 20px;
+	transition: all .5s ease 0s;
+}
+
+nav a:nth-child(1){
+	width: 100px;
+}
+nav .start-home, a:nth-child(1):hover~.animation{
+	width: 100px;
+	left: 0;
+}
+nav a:nth-child(2){
+	width: 110px;
+}
+nav a:nth-child(2):hover~.animation{
+	width: 110px;
+	left: 100px;
+}
+nav a:nth-child(3){
+	width: 100px;
+}
+nav a:nth-child(3):hover~.animation{
+	width: 100px;
+	left: 210px;
+}
+nav a:nth-child(4){
+	width: 140px;
+}
+nav a:nth-child(4):hover~.animation{
+	width: 125px;
+	left: 320px;
+}
+nav a:nth-child(5){
+	width: 140px;
+}
+nav a:nth-child(5):hover~.animation{
+	width: 188px;
+	left: 432px;
+}
+
+/*LOGO ANIMADO*/
+
+.conteiner{
+    width: 500px;
+    overflow: hidden;
+
+}
+
+.conteiner .text{
+    position: relative;
+    color: #53ba83;
+    font-size: 35px;
+    font-weight: 600;
+}
+
+
+.conteiner .text.first-text{ 
+    color: rgb(255, 255, 255);
+    font-size: 45px;
+    text-shadow: 3px 3px #53ba8392;
+}
+
+.text.second-text::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #0c0636;
+    border-left: 2px solid #059b9a;
+    animation: animate 6s steps(12) infinite;
+}
+
+@keyframes animate{
+    40%, 60%{
+        left: calc(100% + 4px);
+    }
+
+    4100%{
+        left: 0%;
+    }
+}
+
+/* Tornar o menu responsivo para DESKTOP apenas */
+@media (max-width: 1200px) {
+    .menu {
+        height: 8vh; /* Diminuir a altura da barra */
+    }
+
+    .conteiner .text {
+        font-size: 26px; /* Reduzir o tamanho do texto do logo */
+    }
+
+    .conteiner .text.first-text {
+        font-size: 30px; /* Ajustar a fonte do primeiro texto do logo */
+    }
+
+    nav {
+        width: 100%; /* Permitir que o menu ocupe mais espaço */
+    }
+
+    nav a {
+        font-size: 12px; /* Diminuir o tamanho das fontes dos links */
+        line-height: 36px; /* Ajustar a altura da linha dos links */
+        padding: 0 12px; /* Reduzir o padding dos links */
+    }
+
+}
+
+@media (max-width: 992px) {
+    .menu {
+        height: 7vh;
+    }
+
+    .conteiner .text {
+        font-size: 22px;
+    }
+
+    .conteiner .text.first-text {
+        font-size: 26px;
+    }
+
+    nav {
+        width: 100%; /* Ocupar 100% da largura disponível */
+    }
+
+    .nav-links {
+        justify-content: space-around; /* Distribuir igualmente */
+    }
+
+    nav a {
+        font-size: 11px;
+        line-height: 32px;
+        padding: 0 10px; /* Reduzir ainda mais o padding */
+    }
+
+}
+
+@media (max-width: 768px) {
+    .menu {
+        height: 6vh;
+    }
+
+    .conteiner .text {
+        font-size: 18px;
+    }
+
+    .conteiner .text.first-text {
+        font-size: 22px;
+    }
+
+    nav a {
+        font-size: 10px;
+        line-height: 28px;
+        padding: 0 8px; /* Reduzir o padding para evitar que os textos quebrem */
+    }
+
+    nav .animation {
+        display: none; /* Opcional: Ocultar a animação em tamanhos muito pequenos */
+    }
+}
+
+/* Container principal que envolve todas as seções */
+.main-container {
+    display: flex;
+    height: calc(100vh - 10vh); /* Desconta a altura da barra de navegação */
+    margin-top: 0px; /* Espaço para a barra de navegação */
+}
+
+/* Primeira divisão ocupando metade da largura e toda a altura */
+.first-section {
+    flex: 1;
+    background-color: #53ba83;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+#tpm {
+    position: relative;
+    top: 0vh;
+    width: 74vh;
+    height: 40vh;
+    background-color: #e6faf8bc;
+    border-radius: 15px;
+    z-index: 1;
+}
+
+#upm {
+    position: absolute;
+    top: 55%;
+    width: 74vh;
+    height: 40vh;
+    background-color: #e6faf8bc;
+    border-radius: 15px;
+    z-index: 1;
+    
+}
+
+h1, p{
+	z-index: 1000;
+}
+
+
+#svg1{
+	position: absolute;
+	top: 13vh;
+	background-color: #53ba83;
+}
+
+svg{
+	position: absolute;
+	bottom: 0vh;
+	height: 45%;
+	background-color: #095169;
+
+}
+
+/* Container para as duas seções à direita */
+.side-sections {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+	z-index: 1000;
+}
+
+/* Segunda e terceira divisões com 50% da altura cada uma */
+.second-section, .third-section {
+    flex: 1;
+    background-color: #ccc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.container {
+    display: flex;
+    align-items: center; /* Alinha o círculo e o retângulo verticalmente */
+}
+
+
+.circle {
+	position: absolute;
+   	height: 37vh;
+	width: 37vh;
+    border-radius: 50%; /* Faz o div se tornar um círculo */
+    overflow: hidden; /* Oculta qualquer parte da imagem que ultrapasse o círculo */
+    margin-right: 20px; /* Espaço entre o círculo e o retângulo */
+    border: 5px solid #0c0636; /* Borda opcional para o círculo */
+	background-color: #0c0636;
+    box-shadow: 0 4px 10px rgb(0, 0, 0); /* Sombra para o retângulo */
+    z-index: 1000;
+
+}
+
+.circle img {
+    width: 100%; /* Faz a imagem ocupar 100% da largura do círculo */
+    height: auto; /* Mantém a proporção da imagem */
+}
+
+.rectangle {
+    background-color: #53ba83; /* Cor de fundo do retângulo */
+    color: white; /* Cor do texto */
+    padding: 20px; /* Espaçamento interno */
+    border-radius: 25px; /* Bordas arredondadas */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para o retângulo */
+	margin-left: 5vw;
+	height: 27vh;
+}
+
+.rectangle h2{
+    font-family: "Open Sans", sans-serif;
+    font-weight: 800;
+    font-size: 30px;
+    color: #0c0636;
+}
+
+#line{
+    height: 0.9vh;
+    width: 40vh;
+    border-radius: 10px;
+    background-color: #0c0636;
+    position: relative;
+    left: 35%;
+    top: -10%;
+    z-index: 1;
+}
+
+.rectangle p{
+    font-family: "Open Sans", sans-serif;
+    font-weight: bolder;
+    font-size: 20px;
+    position: relative;
+    top: -10%;
+}
+
+
+.btn{
+    text-align: center;
+    text-decoration: none;
+    background-color: #0a3740;
+    align-items: center;
+    text-decoration: none;
+    font-size: 13px;
+    padding: 15px;
+    font-weight: 900;
+    color: aliceblue;
+    border-radius: 30px;
+    position: absolute;
+    left: 88%;
+    top: 44%;
+    height: 2vh;
+    background-color: #095169;
+    width: 12vh;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-property: box-shadow, transform;
+    transition-property: box-shadow, transform;
+}
+
+.btn:hover, .btn:focus, .btn:active{
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+}
+
+
+.rectangle h2, p{
+	margin-left: 30vh;
+}
+
+.second-section {
+    background-color: #0a3740;
+}
+
+.third-section {
+    background-color: #059b9a;
+}
+
+.btnImages{
+    text-align: center;
+    text-decoration: none;
+    background-color: #0a3740;
+    align-items: center;
+    font-size: 13px;
+    padding: 15px;
+    font-weight: 900;
+    color: rgb(255, 255, 255);
+    border-radius: 30px;
+    position: absolute;
+    left: 88%;
+    top: 90%;
+    height: 2vh;
+    background-color: #095169;
+    width: 12vh;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-property: box-shadow, transform;
+    transition-property: box-shadow, transform;
+    z-index: 1000;
+}
+
+.btnImages:hover, .btn:focus, .btn:active{
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+}
+
+/*CARROSSEL DE IMAGENS*/
+.slider{
+    margin: 0 auto;
+    margin-top: 13px;
+    width: 90%;
+    height: 280px;
+    overflow: hidden;
+    z-index: 3;
+    border-radius: 10px;
+    border-top-left-radius: 10px;
+}
+
+.slides{
+    width: 400%;
+    height: 250px;
+    display: flex;
+}
+
+.slides input{
+    display: none;
+}
+
+.slide{
+    width: 25%;
+    position: relative;
+    transition: 2s;
+}
+
+.slide img{
+    width: 100%;
+    margin-left: 0%;
+}
+
+.manual-navigation{
+    position: absolute;
+    width: 42%;
+    margin-top: -20px;
+    display: flex;
+    justify-content: center;
+}
+
+.manual-btn{
+    border: 2px solid aliceblue;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 1s;
+}
+
+.manual-btn:not(:last-child){
+    margin-right: 20px;
+}
+
+.manual-btn:hover{
+    background-color: aliceblue;
+}
+
+#radio1:checked ~ .first{
+    margin-left: 0;
+}
+
+#radio2:checked ~ .first{
+    margin-left: -25%;
+}
+
+#radio3:checked ~ .first{
+    margin-left: -50%;
+}
+
+#radio4:checked ~ .first{
+    margin-left: -75%;
+}
+
+.navigation-auto div{
+    border: 2px solid brown;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 1s;
+}
+
+.navigation-auto{
+    position: absolute;
+    width: 42%;
+    margin-top: 230px;
+    display: flex;
+    justify-content: center;
+}
+
+.navigation-auto div:not(:last-child){
+    margin-right: 20px;
+}
+
+#radio1:checked ~ .navigation-auto .auto-btn1{
+    background-color: aliceblue;
+}
+
+#radio2:checked ~ .navigation-auto .auto-btn2{
+    background-color: aliceblue;
+}
+
+#radio3:checked ~ .navigation-auto .auto-btn3{
+    background-color: aliceblue;
+}
+
+#radio4:checked ~ .navigation-auto .auto-btn4{
+    background-color: aliceblue;
+}
+

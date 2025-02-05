@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="CSS/index.css">
+        <script src="libschart/chart.min.js"></script>
+        <title>CSIA</title>
+    </head>
+    <body>
+
+    <!--Barra de navegação-->
+    <div class="menu">
+        <div class="conteiner">
+            <span class="text first-text">CSIA </span>
+            <span class="text second-text">- Sistema de Irrigação</span>
+        </div>
+        <script>
+            const text = document.querySelector('.second-text');
+
+            const textLoad = () => {
+                setTimeout(() => {
+                    text.textContent = ' - Sistema de Irrigação';
+                }, 0);
+            }
+
+            textLoad();
+            setInterval(textLoad, 4000)
+
+        </script>
+        <nav>
+            <a href="#">Início</a>
+            <a href="textos.html">Sobre</a>
+            <a href="relatorio.html">Relatório</a>
+            <a href="graficos.html">Gráficos</a>
+            <a href="desenvolvedores.html">Desenvolvedores</a>
+            <div class="animation start-home"></div>
+        </nav>
+    </div>
+
+    <!-- Container Principal -->
+    <div class="main-container">
+        <!-- Primeira Divisão -->
+        <section class="first-section">
+            <div id="tpm">
+                <canvas id="temperature-chart"></canvas>
+            </div>
+            <div id="upm">
+                <canvas id="humidity-chart"></canvas>
+            </div>
+                      
+            <svg id="svg1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 318"><path fill="#095169" fill-opacity="1" d="M0,64L48,106.7C96,149,192,235,288,240C384,245,480,171,576,144C672,117,768,139,864,144C960,149,1056,139,1152,112C1248,85,1344,43,1392,21.3L1440,0L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#0c0636" fill-opacity="1" d="M0,64L48,106.7C96,149,192,235,288,240C384,245,480,171,576,144C672,117,768,139,864,144C960,149,1056,139,1152,112C1248,85,1344,43,1392,21.3L1440,0L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>
+        </section>
+
+        <!-- Segunda e Terceira Divisão -->
+        <div class="side-sections">
+            <!-- Segunda Divisão -->
+            <section class="second-section">
+                <div class="container">
+                    <div class="circle">
+                        <img src="imgs/roseira.jpeg" alt="Imagem" />
+                    </div>
+                    <div class="rectangle">
+                        <h2>O que é?</h2>
+                        <div id="line"></div>
+                        <p>CSIA é um sistema de irrigação automatizada visando a viabilidade</p>
+                        <a href="textos.html" class="btn">Ver mais</a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Terceira Divisão -->
+            <section class="third-section">
+                <!--Imagens-->
+                <div class="slider">
+
+                    <!--Botões-->
+                    <div class="slides">
+                        <input type="radio" name="radio-btn" id="radio1">
+                        <input type="radio" name="radio-btn" id="radio2">
+                        <input type="radio" name="radio-btn" id="radio3">
+                        <input type="radio" name="radio-btn" id="radio4">
+                    
+                    <!--slide imagens-->
+                        <div class="slide first">
+                            <img src="https://cdn.pixabay.com/photo/2021/10/11/11/13/nature-6700318_1280.jpg" alt="imagem1">
+                        </div>
+                        <div class="slide">
+                            <img src="imgs/WhatsApp Image 2024-10-26 at 08.01.00.jpeg" alt="imagem2">
+                        </div>
+                        <div class="slide">
+                            <img src="imgs/WhatsApp Image 2024-10-26 at 08.01.02 (1).jpeg" alt="imagem3">
+                        </div>
+                        <div class="slide">
+                            <img src="imgs/WhatsApp Image 2024-10-26 at 08.01.02.jpeg" alt="imagem4">
+                        </div>
+
+                        <!--Navegação AUTO-->
+
+                        <div class="navigation-auto">
+                            <div class="auto-btn1"></div>
+                            <div class="auto-btn2"></div>
+                            <div class="auto-btn3"></div>
+                            <div class="auto-btn4"></div>
+                        </div>
+                    </div>
+
+                    <!--Navegação Manual-->
+                    <div class="manual-navigation">
+                        <label for="radio1" class="manual-btn"></label>
+                        <label for="radio2" class="manual-btn"></label>
+                        <label for="radio3" class="manual-btn"></label>
+                        <label for="radio4" class="manual-btn"></label>
+                    </div>
+                </div>
+                <script src="JS/imagens.js"></script>
+            </section>
+        </div>
+    </div>
+    <a href="graficos.html" class="btnImages">Ver mais</a>
+    <script src="JS/grf.js"></script>
+    </body>
+</html>
